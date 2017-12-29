@@ -25,15 +25,29 @@ svg.small {
   align-items: flex-end;
 }
 
-.loader .item {
-  height: 22px;
-  width: 35px;
-  background-color: #000000;
-  transition: height 1s;
+@keyframes loader {
+  0% {transform: scale(1, 2);}
+  50% {height: 40px;}
+  100% {transform: scale(1, 2);}
 }
 
-.loader .item:hover{
-  height: 70px;
+.loader .item {
+  height: 10px;
+  width: 35px;
+  background-color: #000000;
+  animation: loader 1.5s infinite;
+}
+
+.loader .item:nth-child(2){
+  animation-delay: 0.3s;
+}
+
+.loader .item:nth-child(3){
+  animation-delay: 0.5s;
+}
+
+.loader .item:nth-child(4){
+  animation-delay: 0.7s;
 }
 
 /*Styles for login page*/
